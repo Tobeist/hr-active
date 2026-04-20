@@ -169,6 +169,28 @@ body.locked {
   opacity: 0.8;
 }
 .hero-bottom { display: flex; flex-direction: column; gap: 24px; }
+.hero-meta {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 20px;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.hero-white .hero-meta { border-top: 1px solid var(--gray-100); }
+.hero-meta-item { display: flex; flex-direction: column; gap: 4px; }
+.hero-meta-label {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 600;
+  opacity: 0.55;
+}
+.hero-meta-value {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+}
 .hero-visual {
   position: absolute;
   top: 50%;

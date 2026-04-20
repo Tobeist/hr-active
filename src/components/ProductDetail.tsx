@@ -1,7 +1,6 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import Link from 'next/link';
 import type { Producto } from '@/lib/types';
 import { ProductMock } from './ProductMock';
 import { useCart } from './CartProvider';
@@ -153,21 +152,6 @@ export function ProductDetail({ producto: p, onClose, variant = 'modal' }: Props
               : `Agregar al carrito — $${p.precio * qty}`}
           </button>
         </div>
-
-        {variant === 'modal' && (
-          <Link
-            href={`/producto/${p.slug}`}
-            style={{
-              fontSize: 12,
-              letterSpacing: '0.18em',
-              textTransform: 'uppercase',
-              color: 'var(--gray-500)',
-              textDecoration: 'underline'
-            }}
-          >
-            Ver página completa →
-          </Link>
-        )}
 
         <div className="modal-details">
           <DetailRow text="100% algodón peinado, pre-lavado" />

@@ -56,9 +56,7 @@ export function CartView() {
             </div>
 
             <div className="cart-info">
-              <Link href={`/producto/${item.slug}`} className="cart-name">
-                {item.nombre}
-              </Link>
+              <span className="cart-name">{item.nombre}</span>
               <div className="cart-meta">
                 Talla <strong>{item.talla}</strong>
               </div>

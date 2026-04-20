@@ -1,12 +1,10 @@
 import Link from 'next/link';
-import { Countdown } from './Countdown';
 
 interface Props {
-  countdownEnd: string;
   ctaPrice: number;
 }
 
-export function HeroSplit({ countdownEnd, ctaPrice }: Props) {
+export function HeroSplit({ ctaPrice }: Props) {
   return (
     <section
       className="hero grid"
@@ -31,7 +29,16 @@ export function HeroSplit({ countdownEnd, ctaPrice }: Props) {
           <Link href="#productos" className="cta cta-white">
             Comprar ahora — ${ctaPrice}
           </Link>
-          <Countdown endIso={countdownEnd} variant="dark" />
+          <div className="hero-meta">
+            <div className="hero-meta-item">
+              <span className="hero-meta-label">Envío</span>
+              <span className="hero-meta-value">Nacional · 3–5 días</span>
+            </div>
+            <div className="hero-meta-item">
+              <span className="hero-meta-label">Pago seguro</span>
+              <span className="hero-meta-value">Tarjeta vía Stripe</span>
+            </div>
+          </div>
         </div>
       </div>
 
